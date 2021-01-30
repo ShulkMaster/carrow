@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Carrow
 {
-    internal class Database
+    public class Database
     {
 
         private readonly List<string> _db = new List<string>
