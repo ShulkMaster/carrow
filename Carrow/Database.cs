@@ -7,7 +7,6 @@ namespace Carrow
 {
     internal class Database
     {
-        private static int _insertCount = 0;
 
         private readonly List<string> _db = new List<string>
         {
@@ -19,15 +18,14 @@ namespace Carrow
             "Federico",
         };
 
-        public List<string> ReadCustomers()
+        public List<string> ReadCustomers(int count)
         {
-            _insertCount++;
-            if (_insertCount % 5 == 0)
+            if (count > _db.Count)
             {
                 throw new DataException("cannot open DB connection");
             }
 
-            return _db.ToList();
+            return _db.Take(count).ToList();
         }
 
         public void AddCustomer(string customer)

@@ -7,11 +7,11 @@ namespace Carrow
     {
         private readonly Database _database = new Database();
 
-        public Result<List<string>> ReadCustomers()
+        public Result<List<string>> ReadCustomers(int count)
         {
             try
             {
-                return new Success<List<string>>(_database.ReadCustomers());
+                return new Success<List<string>>(_database.ReadCustomers(count));
             }
             catch (Exception ex)
             {

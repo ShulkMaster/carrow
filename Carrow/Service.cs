@@ -7,10 +7,10 @@ namespace Carrow
     {
         private readonly Repository _repository = new Repository();
 
-        public Result<List<string>> LoadCustomer()
+        public Result<List<string>> LoadCustomer(bool transform, int count)
         {
-            var result = _repository.ReadCustomers();
-            if (result is Success<List<string>> success)
+            var result = _repository.ReadCustomers(count);
+            if (transform && result is Success<List<string>> success)
             {
                 return new Success<List<string>>(success.Value.Select(s => s.ToUpper()).ToList());
             }
