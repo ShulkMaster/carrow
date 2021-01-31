@@ -30,6 +30,7 @@ namespace Carrow
             return _db.Take(count).ToList();
         }
 
+        /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/AddCustomer/*'/>
         public void AddCustomer(string customer)
         {
             if (customer.Trim() == string.Empty)

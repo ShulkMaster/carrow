@@ -31,5 +31,20 @@
                 <see cref="T:System.String"/>
             </returns>
         </ReadCustomers>
+        <AddCustomer>
+            <param name="customer">The <see cref="T:System.String"/> that represents the customer name</param>
+            <summary>
+                This method allow you to add a new customer into the internal fake database records
+            </summary>
+            <example>
+                This is an example for add a customer
+                <code>
+                    string customer = "juanito";
+                    var db = new Database();
+                    res = db.AddCustomer(customer);
+                </code>
+            </example>
+            <returns>extra detaild about <see cref="T:System.Void"/></returns>
+        </AddCustomer>
     </class>
 </docs>
