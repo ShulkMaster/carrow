@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -18,7 +18,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   name: 'Restore' 
-  displayName: 'Restaurando Paquetes y dependencias'
+  displayName: 'Restoring Packages and dependencies'
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
@@ -28,7 +28,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   name: 'Build'
-  displayName: 'Compilando Carrow'
+  displayName: 'Compiling Carrow'
   inputs:
     command: 'build'
     projects: 'Carrow/*.csproj'
@@ -36,7 +36,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   name: 'BuildTest'
-  displayName: 'Compilando CarrowTest'
+  displayName: 'Compiling CarrowTest'
   inputs:
     command: 'build'
     projects: 'CarrowTest/*.csproj'
@@ -51,29 +51,15 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration)'
     testRunTitle: 'Carrow Test'
 
-- task: Bash@3
+- task: PowerShell@2
+  displayName: 'Running powehell documentation builder'
   inputs:
-    targetType: 'inline'
-    script: |
-      curl -#kSL -o ./Carrow/Docs/template.tar.gz https://github.com/jbltx/DiscordFX/archive/v0.3.tar.gz
-      tar xvfz Carrow/Docs/template.tar.gz -C ./Carrow/Docs
-      mkdir ./Carrow/Docs/templates
-      mv Carrow/Docs/DiscordFX-0.3/discordfx ./Carrow/Docs/templates/discordfx
-
-- task: DocFxTask@0
-  inputs:
-    solution: 'Carrow/Docs/docfx.json'
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      tar cvfz site.tar.gz ./Carrow/Docs/_site
-      mv site.tar.gz $(Build.ArtifactStagingDirectory)/packs
+    filePath: 'scripts/script.ps1'
+    showWarnings: true
       
 - task: DotNetCoreCLI@2
   name: 'Packaging'
-  displayName: 'Empacando Carrow'
+  displayName: 'Packaging Carrow'
   inputs:
     command: 'pack'
     packagesToPack: 'Carrow/*.csproj'

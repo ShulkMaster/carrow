@@ -14,8 +14,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Remove="Docs\**"/>
-        <EmbeddedResource Remove="Docs\**"/>
+        <Compile Remove="Docs\**" />
+        <EmbeddedResource Remove="Docs\**" />
     </ItemGroup>
 
     <PropertyGroup>
