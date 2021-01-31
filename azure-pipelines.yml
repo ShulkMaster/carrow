@@ -57,6 +57,7 @@ steps:
     script: |
       curl -#kSL -o ./Carrow/Docs/template.tar.gz https://github.com/jbltx/DiscordFX/archive/v0.3.tar.gz
       tar xvfz Carrow/Docs/template.tar.gz -C ./Carrow/Docs
+      mkdir ./Carrow/Docs/templates
       mv Carrow/Docs/DiscordFX-0.3/discordfx ./Carrow/Docs/templates/discordfx
 
 - task: DocFxTask@0
