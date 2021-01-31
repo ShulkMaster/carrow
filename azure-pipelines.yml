@@ -55,6 +55,7 @@ steps:
   displayName: 'Running powehell documentation builder'
   inputs:
     filePath: 'scripts/script.ps1'
+    arguments: '$(Build.ArtifactStagingDirectory)'
     showWarnings: true
       
 - task: DotNetCoreCLI@2
@@ -68,7 +69,7 @@ steps:
     includesource: true
     includesymbols: true
     versioningScheme: 'byEnvVar'
-    versionEnvVar: '$(version)'
+    versionEnvVar: 'version'
 
 - task: PublishBuildArtifacts@1
   name: 'Droping' 
