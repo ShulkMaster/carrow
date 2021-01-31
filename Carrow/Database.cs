@@ -8,7 +8,6 @@ namespace Carrow
     /// <include file='Docs/Database.xml' path='docs/members[@name="Database"]/Database/*'/>
     public class Database
     {
-
         private readonly List<string> _db = new List<string>
         {
             "Juan",
