@@ -48,14 +48,13 @@ steps:
   inputs:
     command: 'test'
     projects: 'CarrowTest/*.csproj'
-    arguments: '--no-build --configuration $(buildConfiguration)'
+    arguments: '--no-build --configuration $(buildConfiguration) --collect "Code coverage"'
     testRunTitle: 'Carrow Test'
 
 - task: PowerShell@2
   displayName: 'Running powehell documentation builder'
   inputs:
     filePath: 'scripts/script.ps1'
-    arguments: '$(Build.ArtifactStagingDirectory)/packs/site.zip'
     showWarnings: true
       
 - task: DotNetCoreCLI@2
