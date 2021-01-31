@@ -55,6 +55,7 @@ steps:
   displayName: 'Running powehell documentation builder'
   inputs:
     filePath: 'scripts/script.ps1'
+    arguments: '$(Build.ArtifactStagingDirectory)/packs/site.zip'
     showWarnings: true
       
 - task: DotNetCoreCLI@2
@@ -66,11 +67,9 @@ steps:
     packDirectory: '$(Build.ArtifactStagingDirectory)/packs'
     nobuild: true
     includesource: true
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '0'
-    minorVersion: '1'
-    patchVersion: '0'
-    verbosityPack: 'Normal'
+    includesymbols: true
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: '$(version)'
 
 - task: PublishBuildArtifacts@1
   name: 'Droping' 

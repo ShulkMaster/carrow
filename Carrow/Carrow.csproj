@@ -6,6 +6,7 @@
         <AssemblyName>Sovize.Carrow</AssemblyName>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageIcon>icon.ico</PackageIcon>
         <RepositoryUrl>https://github.com/ShulkMaster/carrow</RepositoryUrl>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageTags>Devops Demo DocFx Test</PackageTags>

@@ -11,5 +11,5 @@ Move-Item .\Carrow\Docs\templates\DiscordFX-0.3\discordfx\* .\Carrow\Docs\templa
 .\docfx\docfx.exe .\Carrow\Docs\docfx.json
 Write-Host "Compressing Site"
 Compress-Archive .\Carrow\Docs\_site\* -DestinationPath .\site.zip -CompressionLevel Optimal
-Write-Host "Moving to artifacg staging container"
-Move-Item .\site.zip $(Build.ArtifactStagingDirectory)/packs
+Write-Host "Moving to artifact staging container" ${env:VERSION}
+Move-Item .\site.zip $Args[0]
