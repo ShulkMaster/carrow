@@ -52,7 +52,7 @@ steps:
     testRunTitle: 'Carrow Test'
 
 - task: PowerShell@2
-  displayName: 'Running powehell documentation builder'
+  displayName: 'Building documentation'
   inputs:
     filePath: 'scripts/script.ps1'
     arguments: '$(Build.ArtifactStagingDirectory)'
