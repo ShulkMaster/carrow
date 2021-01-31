@@ -55,13 +55,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
-      echo 'Hello world'
       curl -o ./Carrow/Docs/template.zip https://github.com/jbltx/DiscordFX/archive/v0.3.zip
-    
+
+
 - task: ExtractFiles@1
   inputs:
-    archiveFilePatterns: 'Carrow/Docs/*.zip'
+    archiveFilePatterns: '**/*.zip'
     cleanDestinationFolder: false
     overwriteExistingFiles: true
     destinationFolder: 'Carrow/Docs'
