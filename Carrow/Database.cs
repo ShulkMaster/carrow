@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Carrow
 {
-    /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/Database/*'/>
+    /// <include file='Docs/Database.xml' path='docs/members[@name="Database"]/Database/*'/>
     public class Database
     {
 
@@ -19,7 +19,7 @@ namespace Carrow
             "Federico",
         };
 
-        /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/ReadCustomers/*'/>
+        /// <include file='Docs/Database.xml' path='docs/members[@name="Database"]/ReadCustomers/*'/>
         public List<string> ReadCustomers(int count)
         {
             if (count > _db.Count)
@@ -30,7 +30,7 @@ namespace Carrow
             return _db.Take(count).ToList();
         }
 
-        /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/AddCustomer/*'/>
+        /// <include file='Docs/Database.xml' path='docs/members[@name="Database"]/AddCustomer/*'/>
         public void AddCustomer(string customer)
         {
             if (customer.Trim() == string.Empty)

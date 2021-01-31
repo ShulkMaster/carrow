@@ -21,3 +21,4 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 
 ## Resources
 - [XML documentation for C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/)
+- [XML documentation Generation](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc)

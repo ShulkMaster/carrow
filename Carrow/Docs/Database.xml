@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <docs>
-    <class name="Database">
+    <members name="Database">
         <Database>
             <summary>
                 This class is a fake database that will throws exceptions if you ask more reacords than what it
-                currently holds into memoroy.
+                currently holds into memory.
             </summary>
             <example>
                 This is the one way of instantiating the class
@@ -17,7 +17,9 @@
             <param name="count">The needed amount of record to collect</param>
             <summary>
                 This method return a fetches the customer from the fake DB taking
-                the <paramref name="count" /> amount of records
+                the
+                <paramref name="count"/>
+                amount of records
             </summary>
             <example>
                 This is an example
@@ -32,7 +34,10 @@
             </returns>
         </ReadCustomers>
         <AddCustomer>
-            <param name="customer">The <see cref="T:System.String"/> that represents the customer name</param>
+            <param name="customer">The
+                <see cref="T:System.String"/>
+                that represents the customer name
+            </param>
             <summary>
                 This method allow you to add a new customer into the internal fake database records
             </summary>
@@ -44,7 +49,9 @@
                     res = db.AddCustomer(customer);
                 </code>
             </example>
-            <returns>extra detaild about <see cref="T:System.Void"/></returns>
+            <returns>extra detaild about
+                <see cref="T:System.Void"/>
+            </returns>
         </AddCustomer>
-    </class>
+    </members>
 </docs>

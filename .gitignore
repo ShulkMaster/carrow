@@ -6,3 +6,7 @@ riderModule.iml
 .idea
 /Carrow.sln.DotSettings.user
 .vs
+Carrow/Docs/_site/
+Carrow/Docs/templates
+/**/DROP/
+/**/TEMP/

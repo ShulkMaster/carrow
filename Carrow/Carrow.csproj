@@ -1,7 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <PackageId>Sovize.Carrow</PackageId>
+        <AssemblyName>Sovize.Carrow</AssemblyName>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ShulkMaster/carrow</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageTags>Devops Demo DocFx Test</PackageTags>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Docs\**"/>
+        <EmbeddedResource Remove="Docs\**"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <Authors>ShulkMaster</Authors>
+        <Company>Sovize</Company>
+        <Description>Dummy library for Devops testing</Description>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 
 </Project>
