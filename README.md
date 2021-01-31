@@ -1,6 +1,6 @@
-﻿#Carrow
+﻿# Carrow
 
-## disclaimer
+## Disclaimer
 This is a net standard library use for demo purposes alone
 none of the code feature in here is meant to be a reference
 for any good practice or code style, only for *pipeline devops*
@@ -22,3 +22,4 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 ## Resources
 - [XML documentation for C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/)
 - [XML documentation Generation](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc)
+- [DocFX](https://dotnet.github.io/docfx/)
