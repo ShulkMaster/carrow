@@ -55,8 +55,12 @@ steps:
   displayName: 'Building documentation'
   inputs:
     filePath: 'scripts/script.ps1'
-    arguments: '$(Build.ArtifactStagingDirectory)'
     showWarnings: true
+
+- task: CopyFiles@2
+  inputs:
+    Contents: 'site.zip'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/packs'
       
 - task: DotNetCoreCLI@2
   name: 'Packaging'
