@@ -23,3 +23,4 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 - [XML documentation for C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/)
 - [XML documentation Generation](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc)
 - [DocFX](https://dotnet.github.io/docfx/)
+- [Packaging libraries with dotnet CLI](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package-dotnet-cli)

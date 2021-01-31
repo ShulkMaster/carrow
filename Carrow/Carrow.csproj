@@ -19,6 +19,13 @@
         <EmbeddedResource Remove="Docs\**" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="icon.ico">
+            <Pack>true</Pack>
+            <PackagePath />
+        </None>
+    </ItemGroup>
+
     <PropertyGroup>
         <Authors>ShulkMaster</Authors>
         <Company>Sovize</Company>
