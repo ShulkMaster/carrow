@@ -51,6 +51,31 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration)'
     testRunTitle: 'Carrow Test'
 
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'ShulkMaster'
+    userRepository: 'https://github.com/jbltx/DiscordFX'
+    defaultVersionType: 'latest'
+    itemPattern: '**.zip'
+    downloadPath: 'Carrow/Docs'
+    
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: 'Carrow/Docs/*.zip'
+    cleanDestinationFolder: false
+    overwriteExistingFiles: true
+    destinationFolder: 'Carrow/Docs'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'Carrow/Docs/DiscordFX-0.3'
+    Contents: '**'
+    TargetFolder: 'Carrow/Docs'
+
+- task: DocFxTask@0
+  inputs:
+    solution: 'Carrow/Docs/docfx.json'
+
 - task: DotNetCoreCLI@2
   name: 'Packaging'
   displayName: 'Empacando Carrow'
