@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace Carrow
 {
+    /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/Database/*'/>
     public class Database
     {
 
@@ -18,6 +19,7 @@ namespace Carrow
             "Federico",
         };
 
+        /// <include file='Docs/Database.xml' path='docs/class[@name="Database"]/ReadCustomers/*'/>
         public List<string> ReadCustomers(int count)
         {
             if (count > _db.Count)

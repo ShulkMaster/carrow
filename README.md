@@ -18,3 +18,6 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 - Consume the publish package in other project
 
 😉
+
+## Resources
+- [XML documentation for C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/)

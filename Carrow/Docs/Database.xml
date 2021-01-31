@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docs>
+    <class name="Database">
+        <Database>
+            <summary>
+                This class is a fake database that will throws exceptions if you ask more reacords than what it
+                currently holds into memoroy.
+            </summary>
+            <example>
+                This is the one way of instantiating the class
+                <code>
+                    var res = new Database();
+                </code>
+            </example>
+        </Database>
+        <ReadCustomers>
+            <param name="count">The needed amount of record to collect</param>
+            <summary>
+                This method return a fetches the customer from the fake DB taking
+                the <paramref name="count" /> amount of records
+            </summary>
+            <example>
+                This is an example
+                <code>
+                    int count = 5;
+                    var db = new Database();
+                    res = db.ReadCustomers(count);
+                </code>
+            </example>
+            <returns>A list of customers as
+                <see cref="T:System.String"/>
+            </returns>
+        </ReadCustomers>
+    </class>
+</docs>
