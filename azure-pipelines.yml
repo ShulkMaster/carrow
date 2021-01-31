@@ -51,13 +51,13 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration)'
     testRunTitle: 'Carrow Test'
 
-- task: DownloadGitHubRelease@0
+- task: Bash@3
   inputs:
-    connection: 'ShulkMaster'
-    userRepository: 'https://github.com/jbltx/DiscordFX'
-    defaultVersionType: 'latest'
-    itemPattern: '**.zip'
-    downloadPath: 'Carrow/Docs'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      echo 'Hello world'
+      curl -o ./Carrow/Docs/template.zip https://github.com/jbltx/DiscordFX/archive/v0.3.zip
     
 - task: ExtractFiles@1
   inputs:
