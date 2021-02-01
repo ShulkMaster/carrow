@@ -59,7 +59,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '**\release\**'
+    Contents: '**\ArtifactStage\**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
       
 - task: DotNetCoreCLI@2
@@ -79,6 +79,6 @@ steps:
   name: 'Dropping' 
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/packs'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'

@@ -12,9 +12,9 @@ Move-Item -Path .\Carrow\Docs\templates\DiscordFX-0.3\discordfx -Destination .\C
 Write-Host "Building documentation"
 .\docfx\docfx.exe .\Carrow\Docs\docfx.json
 Write-Host "Compressing Site"
-mkdir release
-Copy-Item .\Dockerfile .\release\
-Copy-Item .\scripts\release.ps1 .\release\
-Compress-Archive .\Carrow\Docs\_site -DestinationPath .\release\site.zip -CompressionLevel Optimal
-Write-Host "moved to release"
-Get-ChildItem .\release
+mkdir ArtifactStage
+Copy-Item .\Dockerfile .\ArtifactStage\
+Copy-Item .\scripts\release.ps1 .\ArtifactStage\
+Compress-Archive .\Carrow\Docs\_site -DestinationPath .\ArtifactStage\site.zip -CompressionLevel Optimal
+Write-Host "Moved to ArtifactStage"
+Get-ChildItem .\ArtifactStage
