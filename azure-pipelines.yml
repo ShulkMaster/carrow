@@ -59,7 +59,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '.\release\**'
+    Contents: '**\release\**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
       
 - task: DotNetCoreCLI@2

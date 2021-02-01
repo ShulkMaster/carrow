@@ -16,4 +16,5 @@ mkdir release
 Copy-Item .\Dockerfile .\release\
 Copy-Item .\scripts\release.ps1 .\release\
 Compress-Archive .\Carrow\Docs\_site -DestinationPath .\release\site.zip -CompressionLevel Optimal
+Write-Host "moved to release"
 Get-ChildItem .\release
