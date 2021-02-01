@@ -15,6 +15,4 @@ Write-Host "Compressing Site"
 mkdir ArtifactStage
 Copy-Item .\Dockerfile .\ArtifactStage\
 Copy-Item .\scripts\release.ps1 .\ArtifactStage\
-Compress-Archive .\Carrow\Docs\_site -DestinationPath .\ArtifactStage\site.zip -CompressionLevel Optimal
-Write-Host "Moved to ArtifactStage"
-Get-ChildItem .\ArtifactStage
+Copy-Item .\Carrow\Docs\_site -DestinationPath .\ArtifactStage\site\
