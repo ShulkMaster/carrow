@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Carrow.Data;
 
 namespace Carrow
 {
     public class Service
     {
-        private readonly Repository _repository = new Repository();
+        private readonly Repository _repository = new Repository(new Database());
 
         public Result<List<string>> LoadCustomer(bool transform, int count)
         {

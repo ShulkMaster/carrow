@@ -1,5 +1,5 @@
 using System.Data;
-using Carrow;
+using Carrow.Data;
 using Xunit;
 
 namespace CarrowTest

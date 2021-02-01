@@ -54,4 +54,11 @@
             </returns>
         </AddCustomer>
     </members>
+    <members name="IDatabase">
+        <IDatabase>
+            <summary>
+                basic interface use to simulate database stuff, also improves unit tsting by IOC
+            </summary>
+        </IDatabase>
+    </members>
 </docs>
