@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docs>
+    <members name="Repository">
+        <Repository>
+            <summary>
+                fake repository class, wrapper around the fake database implementing
+                <see cref="T:Carrow.Data.IDatabase"/>
+            </summary>
+            <example>
+                This is the one way of instantiating the class
+                <code>
+                    IDatabase db = MyDatabaseImplementaton();
+                    var repo = new Repository(db);
+                </code>
+            </example>
+        </Repository>
+        <Contructor>
+            <summary>
+                Requires a
+                <see cref="T:Carrow.Data.IDatabase"/>
+                to work, it will help you to get just some records
+                instead of all of them, usefull when implementing pagination.
+            </summary>
+        </Contructor>
+        <ReadCustomers>
+            <param name="count">The needed amount of record to collect</param>
+            <summary>
+                It will return a result indicating whether or not the specified
+                <paramref name="count"/>
+                of customer was retrieved from the database or not. If not it may contain an
+                <see cref="T:System.Exception"/>
+                with further explanation about the error
+            </summary>
+        </ReadCustomers>
+    </members>
+</docs>
