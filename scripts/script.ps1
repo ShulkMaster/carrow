@@ -7,12 +7,11 @@ Write-Host "Extracting DocFx"
 Expand-Archive docfx.zip -DestinationPath .\docfx -Verbose
 Write-Host "Extracting Template"
 Expand-Archive template.zip -DestinationPath .\Carrow\Docs\templates -Verbose
-#https://github.com/ovasquez/docfx-material/releases/download/0.5.0/material.zip
 Move-Item -Path .\Carrow\Docs\templates\DiscordFX-0.3\discordfx -Destination .\Carrow\Docs\templates\discordfx
 Write-Host "Building documentation"
 .\docfx\docfx.exe .\Carrow\Docs\docfx.json
-Write-Host "Compressing Site"
+Write-Host "Moving files to ArtifactStage"
 mkdir ArtifactStage
 Copy-Item .\Dockerfile .\ArtifactStage\
 Copy-Item .\scripts\release.ps1 .\ArtifactStage\
-Copy-Item .\Carrow\Docs\_site -DestinationPath .\ArtifactStage\site\
+Copy-Item .\Carrow\Docs\_site .\ArtifactStage\site\
