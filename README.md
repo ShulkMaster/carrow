@@ -25,3 +25,5 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 - [DocFX](https://dotnet.github.io/docfx/)
 - [Packaging libraries with dotnet CLI](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package-dotnet-cli)
 - [Upload coverage task](https://docs.microsoft.com/en-us/azure/devops/pipelines/test/review-code-coverage-results?view=azure-devops)
+- [Credentials provider](https://github.com/microsoft/artifacts-credprovider#azure-artifacts-credential-provider)
+- [Release pipeline Artifact permission](https://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops)

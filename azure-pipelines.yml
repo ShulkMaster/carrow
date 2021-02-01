@@ -59,8 +59,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'site.zip'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/packs'
+    Contents: 'release/**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
       
 - task: DotNetCoreCLI@2
   name: 'Packaging'
@@ -76,7 +76,7 @@ steps:
     versionEnvVar: 'version'
 
 - task: PublishBuildArtifacts@1
-  name: 'Droping' 
+  name: 'Dropping' 
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/packs'

@@ -7,7 +7,12 @@ Write-Host "Extracting DocFx"
 Expand-Archive docfx.zip -DestinationPath .\docfx -Verbose
 Write-Host "Extracting Template"
 Expand-Archive template.zip -DestinationPath .\Carrow\Docs\templates -Verbose
-Move-Item .\Carrow\Docs\templates\DiscordFX-0.3\discordfx\* .\Carrow\Docs\templates\discordfx
+#https://github.com/ovasquez/docfx-material/releases/download/0.5.0/material.zip
+Move-Item -Path .\Carrow\Docs\templates\DiscordFX-0.3\discordfx -Destination .\Carrow\Docs\templates\discordfx
+Write-Host "Building documentation"
 .\docfx\docfx.exe .\Carrow\Docs\docfx.json
 Write-Host "Compressing Site"
-Compress-Archive .\Carrow\Docs\_site\* -DestinationPath .\site.zip -CompressionLevel Optimal
+mkdir release
+Copy-Item .\Dockerfile .\release\
+Copy-Item .\scripts\release.ps1 .\release\
+Compress-Archive .\Carrow\Docs\_site -DestinationPath .\release\site.zip -CompressionLevel Optimal
