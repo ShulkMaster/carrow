@@ -14,4 +14,4 @@ Write-Host "Moving files to ArtifactStage"
 mkdir ArtifactStage
 Copy-Item .\Dockerfile .\ArtifactStage\
 Copy-Item .\scripts\release.ps1 .\ArtifactStage\
-Copy-Item .\Carrow\Docs\_site .\ArtifactStage\site\
+Copy-Item .\Carrow\Docs\_site .\ArtifactStage\site\ -Recurse
