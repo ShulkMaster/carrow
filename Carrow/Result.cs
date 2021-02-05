@@ -16,7 +16,7 @@ namespace Carrow
         }
     }
     
-    public class Failure<TResult> : Result<TResult>
+    public sealed class Failure<TResult> : Result<TResult>
     {
         public int Code { get; }
         public string Message { get; }
@@ -36,4 +36,8 @@ namespace Carrow
             Ex = ex;
         }
     }
+    
+    
+    /// <include file='Docs/Result.xml' path='docs/members[@name="Unit"]/Unit/*'/>
+    public readonly struct Unit {}
 }

@@ -32,5 +32,23 @@ namespace Carrow.Repositories
         {
             Console.Write("this is private");
         }
+
+        ///  <include file='../Docs/Repositories.xml' path='docs/members[@name="Repository"]/SaveCustomer/*'/>
+        public Result<Unit> SaveCustomer(string customer)
+        {
+            if (customer.Trim().Equals(string.Empty))
+            {
+                return new Failure<Unit>(0, "Customer name cannot be empty");
+            }
+            try
+            {
+                _database.AddCustomer(customer);
+                return new Success<Unit>(new Unit());
+            }
+            catch (Exception ex)
+            {
+                return new Failure<Unit>(0, "Customer name cannot be empty", ex);
+            }
+        }
     }
 }

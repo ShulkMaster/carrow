@@ -13,9 +13,15 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  version: '0.1.5'
 
 steps:
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'Write-Host $(version)'
+      
 - task: DotNetCoreCLI@2
   name: 'Restore' 
   displayName: 'Restoring Packages and dependencies'

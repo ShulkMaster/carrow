@@ -32,5 +32,16 @@
                 with further explanation about the error
             </summary>
         </ReadCustomers>
+        <SaveCustomer>
+            <param name="customer">The
+                <see cref="T:System.String"/>
+                that represent the customer
+            </param>
+            <summary>
+                It will try to save the
+                <paramref name="customer" />
+                to the underliying database implementation
+            </summary>
+        </SaveCustomer>
     </members>
 </docs>

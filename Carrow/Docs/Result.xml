@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docs>
+    <members name="Unit">
+        <Unit>
+            <summary>
+                This struc represents an emthy result, when dealing with funcional programming returning void
+                does not really work well does it 😂
+            </summary>
+        </Unit>
+    </members>
+</docs>

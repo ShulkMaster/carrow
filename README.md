@@ -27,3 +27,4 @@ a pipeline for CI/DC integration in your project, we'll cover steps as follow
 - [Upload coverage task](https://docs.microsoft.com/en-us/azure/devops/pipelines/test/review-code-coverage-results?view=azure-devops)
 - [Credentials provider](https://github.com/microsoft/artifacts-credprovider#azure-artifacts-credential-provider)
 - [Release pipeline Artifact permission](https://docs.microsoft.com/en-us/azure/devops/artifacts/feeds/feed-permissions?view=azure-devops)
+- [Predefined variables in Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml)
